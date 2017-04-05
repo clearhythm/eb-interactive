@@ -1,7 +1,10 @@
 # EB-Interactive
 
 This repository is a lightweight HTML5/CSS3/JS framework for creating responsive single-page mobile apps.
-It includes a few libraries:
+A sample of this framework in action can be seen on my personal website:
+[Erik Burns Interactive](http://www.erikburns.com)
+
+This framework is built on top of a few popular libraries:
 
 * React (JS models)
 * Mobile Boilerplate (for views)
