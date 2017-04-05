@@ -1,0 +1,340 @@
+-MediumObl/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Global */
+html, body { background: rgb(51, 43, 49); text-align: center; }
+h1,h2,h3,h4,h5,h6,a { color: #fff; font-family: Futura-Medium, "FuturaPT-Medium", "Century Gothic", CenturyGothic, "Avant Garde", sans-serif; font-weight: 500; line-height: 1em; }
+p,blockquote,pre { color: #fff; font-family: Futura-Book, "FuturaPT-Book", "Century Gothic", CenturyGothic, "Avant Garde", sans-serif; font-weight: 400; letter-spacing: .5px; line-height: 1.4em; }
+h1 { margin-top: 40px; font-size: 20px; letter-spacing: 2.7px; text-transform: uppercase; }
+a { text-decoration: none; color: #fff !important; cursor: pointer; }
+h2 { margin: 0; font-size: 95px; }
+h3 { margin: 0; font-size: 34px; }
+p { margin: 30px 0 45px; font-size: 20px; }
+header, section, footer { z-index: 20 }
+
+/* Navigation */
+.nav_rocket { padding: 20px 0; }
+.nav_rocket a { position: relative; display: block; width: 112px; height: 100px; padding: 30px 20px; margin: 0 auto; }
+.nav_rocket .lights { position: absolute; top: 62px; left: 68px; }
+nav { position: relative; margin-top: 0px; padding: 30px 0 100px; color: #fff; }
+nav ul { padding: 0; margin: 0; width: 100%; height: 100%; list-style: none; }
+nav ul li { display: inline-block; text-align: center; }
+nav li.link-l { position: absolute; bottom: 0; left: 20% }
+nav li.link-m { position: relative; left: 0; top: 0 }
+nav li.link-r { position: absolute; bottom: 0; right: 20% }
+nav i.material-icons { font-size: 30px; padding: 8px; border: 1px dotted #fff; border-radius: 100px; }
+nav li a, nav li a:link, nav li a:visited { color: #fff; opacity: .5; }
+nav li a:hover, nav li a:active { opacity: 1; }
+
+.menu { display: none }
+.menu ul { margin: 40px 0 0; padding: 0; list-style: none; }
+.menu li { margin: 0; padding: 10px 0; }
+.menu a { font-size: 20px; }
+
+/* Typgraphy */
+@font-face {
+  font-family: 'FuturaPT-Book';
+  src: url('/css/webfont/FuturaPT-Book.eot'); /* IE9 Compat Modes */
+  src: url('/css/webfont/FuturaPT-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/webfont/FuturaPT-Book.woff') format('woff'), /* Pretty Modern Browsers */
+       url('w/css/webfont/FuturaPT-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/css/webfont/FuturaPT-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'FuturaPT-Medium';
+  src: url('/css/webfont/FuturaPT-Medium.eot'); /* IE9 Compat Modes */
+  src: url('/css/webfont/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/webfont/FuturaPT-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('w/css/webfont/FuturaPT-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/css/webfont/FuturaPT-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'FuturaPT-BookObl';
+  src: url('/css/webfont/FuturaPT-BookObl.eot'); /* IE9 Compat Modes */
+  src: url('/css/webfont/FuturaPT-BookObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/webfont/FuturaPT-BookObl.woff') format('woff'), /* Pretty Modern Browsers */
+       url('w/css/webfont/FuturaPT-BookObl.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/css/webfont/FuturaPT-BookObl.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'FuturaPT-MediumObl';
+  src: url('/css/webfont/FuturaPT-MediumObl.eot'); /* IE9 Compat Modes */
+  src: url('/css/webfont/FuturaPT-MediumObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/css/webfont/FuturaPT-MediumObl.woff') format('woff'), /* Pretty Modern Browsers */
+       url('w/css/webfont/FuturaPT-MediumObl.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/css/webfont/FuturaPT-MediumObl.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* Content */
+.content { position: absolute; height: 100%; width: 100%; z-index: 10; }
+
+.content .slide_menu ul { margin: 0; padding: 0; list-style: none }
+.content .slide_menu ul li { display: inline-block; padding: 0; margin: 0; }
+.content .slide_menu ul li a { display: inline-block; padding: 2px; margin: 0 0 0 -4px }
+.content .slide_menu ul li a span { display: inline-block; border: 2px solid #fff; width: 12px; height: 12px; border-radius: 12px; padding: 0; margin: 0; }
+.content .slide_menu ul li a.selected span, .content .slide_menu ul li a:hover span { background-color: #fff }
+
+/* Buttons */
+.content a.button { border: 2px solid rgba(255,255,255,.9); padding: 12px 20px; font-size: 13px; color: #fff; letter-spacing: 2.7px; text-transform: uppercase; text-decoration: none; cursor: pointer; }
+.content a.button:hover { color: rgba(51,43,49,1) !important; background-color: #fff; }
+
+/* Footer */
+footer { position: absolute; bottom: 36px; width: 100% }
+footer .wrapper { float: left; position: relative; left: 50%; }
+footer .wrapper ul { display: block; float: left; position: relative; left: -50%; padding: 0; margin: 0; list-style: none; }
+footer .wrapper ul li { display: inline-block; padding: 0 2px; }
+footer .wrapper ul svg { border-radius: 100px; width: 28px; height: 28px; }
+footer .wrapper ul svg:hover path { opacity: 1; }
+footer .wrapper ul path { fill: rgba(255,255,255,1); opacity: 1 }
+
+/* Page background images & scrim */
+.background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1 }
+.background div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.background div:first-child { background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+.tree { background-image: url('/img/bg_notree.jpg') }
+.scrim { background-color: rgba(51, 43, 49, .5); z-index: 5; }
+
+/* Animations */
+.slide_anim {
+ animation: slide-anim .5s ease-in-out;
+}
+.slide-anim 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(0, 14px, 0);
+ -moz-transform: translate3d(0, 14px, 0);
+ -ms-transform: translate3d(0, 14px, 0);
+ -o-transform: translate3d(0, 14px, 0);
+ transform: translate3d(0, 14px, 0);
+}
+.slide-anim 100% {
+ opacity: 1;
+ -webkit-transform: translate3d(0, 0, 0);
+ -moz-transform: translate3d(0, 0, 0);
+ -ms-transform: translate3d(0, 0, 0);
+ -o-transform: translate3d(0, 0, 0);
+ transform: translate3d(0, 0, 0);
+}
+@-webkit-keyframes slide-anim {
+ 0% {
+   opacity: 0;
+   -webkit-transform: translate3d(0, 14px, 0);
+   -moz-transform: translate3d(0, 14px, 0);
+   -ms-transform: translate3d(0, 14px, 0);
+   -o-transform: translate3d(0, 14px, 0);
+   transform: translate3d(0, 14px, 0);
+ }
+ 100% {
+   opacity: 1;
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   -o-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+ }
+}
+@keyframes slide-anim {
+ 0% {
+   opacity: 0;
+   -webkit-transform: translate3d(0, 14px, 0);
+   -moz-transform: translate3d(0, 14px, 0);
+   -ms-transform: translate3d(0, 14px, 0);
+   -o-transform: translate3d(0, 14px, 0);
+   transform: translate3d(0, 14px, 0);
+ }
+ 100% {
+   opacity: 1;
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   -o-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+ }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
