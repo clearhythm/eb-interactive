@@ -12,12 +12,12 @@ This framework is built on top of a few popular libraries:
 
 ## Goals
 
-* No scrolling - No horizontal scrolling in the views - think "app" and not "site"
-* Single-page - No server roundtrip - keep it light and snappy, focus on transitions
+* No scrolling - No horizontal scrolling in the views, think more "app" and less "site"
+* Single-page - No server roundtrip, keep it light and snappy, focus on transitions
 
-## [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
+## Mobile Boilerplate
 
-Mobile Boilerplate is a professional front-end template that helps you build
+[Mobile Boilerplate](http://html5boilerplate.com/mobile/) is a professional front-end template that helps you build
 fast and robust mobile web applications. Spend more time developing and less
 time reinventing the wheel.
 
