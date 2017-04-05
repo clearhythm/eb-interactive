@@ -4,12 +4,12 @@ This repository is a lightweight HTML5/CSS3/JS framework for creating responsive
 It includes a few libraries:
 
 * React (JS models)
-* Mobile Biolerplate (for views)
+* Mobile Boilerplate (for views)
 
 ## Goals
 
-* No scrolling - this framework is designed to allow you to create sites and apps with no horizontal scrolling
-* Single-page - make a single page no-roundtrip experience
+* No scrolling - No horizontal scrolling in the views - think "app" and not "site"
+* Single-page - No server roundtrip - keep it light and snappy, focus on transitions
 
 ## [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
 
