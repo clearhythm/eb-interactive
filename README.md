@@ -1,6 +1,6 @@
 # EB-Interactive
 
-This repository is a lightweight HTML5/CSS3/JS framework for creating responsive single-page mobile apps.
+A lightweight HTML5/CSS3/JS framework for creating responsive single-page mobile apps.
 
 A sample of this framework in action can be seen here:
 <br/>[Erik Burns Interactive](http://www.erikburns.com)
