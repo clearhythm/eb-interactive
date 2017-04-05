@@ -3,10 +3,15 @@
 This repository is a lightweight HTML5/CSS3/JS framework for creating responsive single-page mobile apps.
 It includes a few libraries:
 
--- React (JS models)
--- Mobile Biolerplate (for views)
+* React (JS models)
+* Mobile Biolerplate (for views)
 
-# [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
+## Goals
+
+* No scrolling - this framework is designed to allow you to create sites and apps with no horizontal scrolling
+* Single-page - make a single page no-roundtrip experience
+
+## [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
 
 Mobile Boilerplate is a professional front-end template that helps you build
 fast and robust mobile web applications. Spend more time developing and less
@@ -17,13 +22,13 @@ time reinventing the wheel.
 * Twitter: [@h5bp](http://twitter.com/h5bp)
 
 
-## Quick start
+### Quick start
 
 Clone the git repo - `git clone git://github.com/h5bp/mobile-boilerplate.git` -
 or [download it](https://github.com/h5bp/mobile-boilerplate/zipball/master)
 
 
-## Features
+### Features
 
 * Mobile browser optimizations.
 * CSS normalizations and common bug fixes.
@@ -50,7 +55,7 @@ or [download it](https://github.com/h5bp/mobile-boilerplate/zipball/master)
 * Extensive inline and accompanying documentation.
 
 
-## Documentation
+### Documentation
 
 Take a look at the [documentation table of contents](doc/README.md). This
 documentation is bundled with the project, which makes it readily available for
@@ -58,6 +63,6 @@ offline reading and provides a useful starting point for any documentation you
 want to write about your project.
 
 
-## Contributing
+### Contributing
 
 Anyone and everyone is welcome to [contribute](CONTRIBUTING.md).
