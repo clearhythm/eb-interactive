@@ -1,3 +1,11 @@
+# EB-Interactive
+
+This repository is a lightweight HTML5/CSS3/JS framework for creating responsive single-page mobile apps.
+It includes a few libraries:
+
+-- React (JS models)
+-- Mobile Biolerplate (for views)
+
 # [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
 
 Mobile Boilerplate is a professional front-end template that helps you build
