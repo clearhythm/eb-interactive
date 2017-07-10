@@ -1,44 +1,69 @@
-var titles = new Array('Explore', 'Discover', 'Genius', 'Inspire');
-var title_count = titles.length;
-var title_index = 0;
-var title_index_prev = title_index;
-var title_interval = 4000;
+var phrases = new Array('Explore the Infinite &#8902;&#8902;&#8902;&#8902;&#8902;', 'Discover your Journey &#8902;&#8902;&#8902;&#8902;&#8902;', 'Genius made Simple &#8902;&#8902;&#8902;&#8902;&#8902;', 'Inspire your Passion &#8902;&#8902;&#8902;&#8902;&#8902;');
+var phrase_count = phrases.length;
+var phrase_index = undefined;
+var phrase_index_prev = phrase_index;
+var phrase_index_prev_2 = phrase_index;
+
+var current_phrase = undefined; // stores our state - if undefined we are on first load or have reached end of current phrase
+var current_word = undefined; // stores our state - if undefined, we are on first load
+var word_index = 0;
+
+var initial_delay = 0; // number of milliseconds to delay initially
+var word_delay = 3000; // number of milliseconds between words
+var phrase_delay = 0; // number of additional milliseconds between phrases
+
+var title_elem = $(".intro h2");
 if (typeof do_animate_title == "undefined") do_animate_title = true;
 
-function drawRandomTitle(){
-    return Math.floor(Math.random()*(title_count));
+// returns a phrase from an array of phrases. keeps track of current phrase to prevent 2 in a row
+function drawPhrase(phrases){
+  while (phrase_index === phrase_index_prev || phrase_index === phrase_index_prev_2 ) { // can only reappear at most every 3rd time
+    phrase_index = Math.floor(Math.random()*(phrase_count));
+  }
+  var my_phrase = phrases[phrase_index];
+  phrase_index_prev_2 = phrase_index_prev;
+  phrase_index_prev = phrase_index;
+  return my_phrase;
 }
 
-function animateTitle(title){
-    var jqe = $(".intro h2");
-    jqe.removeClass('slide_anim');
-    jqe.offset(); // this triggers reflow to make CSS animate again https://css-tricks.com/restart-css-animation/
-    jqe.html(title).addClass('slide_anim');
-    newTitle();
-    // var char_counter = 0;
-    // var title_length = title.length;
-    // var jqe = $(".desc-wrapper p > strong, .desc-wrapper p > em > strong");
-    // jqe.html('&nbsp;'); // clear out title
-    // var intervalID = window.setInterval(function () { // then animate it
-    //     my_char = title.substring(char_counter,char_counter+1);
-    //     if (my_char == '&') my_char = ' &amp; '; // make it output syntactically correct ampersand
-    //     jqe.append(my_char);
-    //     if (++char_counter === title_length) {
-    //         window.clearInterval(intervalID);
-    //         newTitle();
-    //     }
-    // }, title_chars_interval);
+// returns the next word from an array of words or "" if there are no words left
+function drawWord(words){
+  next_word = words[word_index];
+  word_index = (next_word != undefined) ? word_index + 1 : 0; // increment index or set to 0 if at end of word_array
+  if (next_word === undefined) return "";
+  else return next_word;
 }
 
-function newTitle(){
-  setTimeout(function(){
-    while (title_index === title_index_prev) { // prevent 2 in a row
-        title_index = drawRandomTitle();
+// animate the title: draw a word according to specified delays then call function to update the title element
+function animateTitle(){
+  var my_delay, my_word;
+  if (current_phrase === undefined) {
+    // we're either on a fresh page load or recently completed a phrase
+    if (current_word === undefined) {
+      // we are on a fresh page load
+      my_delay = initial_delay;
+    } else {
+      // we recently completed a phrase
+      my_delay = phrase_delay;
     }
-    title_index_prev = title_index;
-    var new_title = titles[title_index];
-    animateTitle(new_title);
-  }, title_interval);
+    current_phrase = drawPhrase(phrases).split(" ");
+  // we now have an active phrase, so draw a word
+  } else {
+    my_delay = word_delay;
+  }
+  // update the title after the necessary delay
+  setTimeout(function(){
+    current_word = drawWord(current_phrase);
+    if (current_word == "") {
+      // we just reached the end of the phrase we were on
+      current_phrase = undefined;
+    } else {
+      title_elem.removeClass('slide_anim');
+      title_elem.offset(); // this triggers reflow to make CSS animate again https://css-tricks.com/restart-css-animation/
+      title_elem.html(current_word).addClass('slide_anim');
+    }
+    animateTitle();
+  }, my_delay);
 }
 
 function activateMenu(){
@@ -50,6 +75,8 @@ function activateMenu(){
 }
 
 $(function() {
-  if (do_animate_title) newTitle();
+  if (do_animate_title) {
+    animateTitle();
+  }
   activateMenu();
 });
