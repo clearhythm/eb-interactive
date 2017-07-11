@@ -50,33 +50,47 @@
         <!-- Google Material Icon Font -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+        <script type="text/javascript">do_animate_title = false;</script>
     </head>
-    <body>
+    <body class="about">
       <div class="content">
         <header>
           <h1><a href="/">Erik Burns Interactive</a></h1>
         </header>
-        <style>.count { display: block; font-size: 60px; font-weight: bold } .intro div { border-radius: 10px; }</style>
-        <section class="slide_anim" style="margin-top: 140px">
-            <h2>Digitus</h2>
-            <p>Get in touch with digital magic.
-              <br>We're always available via four means:
-              <br>radiowave, carrier pigeon, fiber-optic, or button.
-              <div><a class="button menu-button" href="#">Contact &raquo;</a></div></p>
+        <style>.count { display: block; font-size: 60px; font-weight: bold } .intro div { border-radius: 10px; }
+          .about .intro ul {
+            display: block;
+            float: none;
+          }
+          .about .intro ul li {
+            list-style: none;
+            display: inline-block;
+            perspective: 1000px;
+            perspective-origin: 25% 75%;
+          }
+          .about .intro ul li a {
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px 30px; margin: 0 3px;
+            display: inline-block;
+            font-size: 120%;
+            opacity: .7;
+          }
+          .about .intro ul li a:hover, .about .intro ul li a:active, .about .intro ul li a.selected {
+            opacity: 1;
+            transform: rotate3D(-.5,.1,0,30deg);
+            box-shadow: 7px 7px 1px #888888;
+          }
+        </style>
+        <section class="intro slide_anim" style="margin-top:50px">
+          <h2>Connect</h2>
+          <p>If you think we'd make a great team, please
+            <br>get in touch with me. I'm busy but always on the
+            <br>lookout for great projects &amp; opportunities to grow.
+            <br>
+            <br><a href="#" style="font-weight: normal; font-family: FuturaPT-Book; border-bottom: 1px dotted #fff; font-size: 100%">Get in touch &raquo;</a>
+          </p>
         </section>
-        <section class="menu slide_anim">
-          <ul>
-            <li><a href="" class=""><i class="link-l material-icons md-48">flight_takeoff</i> Services</a></li>
-            <li><a href="" class=""><i class="link-m material-icons md-48">perm_media</i> Portfolio</a></li>
-            <li><a href="" class=""><i class="link-r material-icons md-48">chat</i> Contact</a></li>
-          </ul>
-        </section>
-        <div class="nav_rocket" draggable="true" style="transform: rotate(-45deg); position: absolute; bottom: 80px; left: 44.7%; visibility: hidden">
-          <a href="#">
-            <img src="/img/icons/rocket_ship.png" height="112" width="100">
-            <img class="lights" src="/img/icons/rocket_rotating_lights3.gif" height="28" width="29">
-          </a>
-        </div>
         <footer>
           <div class="wrapper">
             <ul>
@@ -101,10 +115,6 @@
             </ul>
           </div>
         </footer>
-      </div>
-      <div class="background">
-        <div class="tree" style="background-image: url('/img/bg_earthlaunch.jpg')"></div>
-        <div class="scrim"></div>
       </div>
       <!-- Scripts (bottom of load) -->
       <script src="js/vendor/jquery-2.1.0.min.js"></script>
